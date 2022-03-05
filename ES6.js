@@ -84,5 +84,27 @@
 // console.log(newDrinks);
 
 
-//-------------------------------
 
+//-------------------------------
+//Arrow Function
+//표현식 결과값을 반환하는 표현식 본문 
+// let arr = [1,2,3,4,5];
+// let twice = arr.map(v=>v*2);
+// // let twice = arr.map(function(val){
+// //   return val*2;
+// // });
+
+//상태블럭 본문에 쓰이는 경우 
+let arr = [1,2,3,4,5];
+// let twice = arr.map(v=>{
+//   if(v%2 === 0){
+//     console.log('even number')
+//   }else{
+//     console.log('odd number')
+//   }
+// });
+
+let twice = arr.map((v,i)=>{ //i는 index임 
+    console.log(`i: ${i}, v:${v}`);
+  });
+console.log(twice);
