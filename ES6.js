@@ -95,16 +95,57 @@
 // // });
 
 //상태블럭 본문에 쓰이는 경우 
-let arr = [1,2,3,4,5];
-// let twice = arr.map(v=>{
-//   if(v%2 === 0){
-//     console.log('even number')
-//   }else{
-//     console.log('odd number')
-//   }
-// });
+// let arr = [1,2,3,4,5];
+// // let twice = arr.map(v=>{
+// //   if(v%2 === 0){
+// //     console.log('even number')
+// //   }else{
+// //     console.log('odd number')
+// //   }
+// // });
 
-let twice = arr.map((v,i)=>{ //i는 index임 
-    console.log(`i: ${i}, v:${v}`);
-  });
-console.log(twice);
+// let twice = arr.map((v,i)=>{ //i는 index임 
+//     console.log(`i: ${i}, v:${v}`);
+//   });
+// console.log(twice);
+
+
+//-----------------------------------------
+//class 
+//자바스크립트의 function처럼 사용 가능 
+
+class Person{
+  constructor(region_, gender_){
+    this.region = region_;
+    this.gender = gender_;
+  }
+
+
+greetings(val = 'an-nyeong'){
+  console.log(val);
+}
+
+}
+
+let korean = new Person('Korea','female')
+// console.log(korean);
+
+korean.gender = 'male';
+// console.log(korean);
+
+korean.greetings();
+
+class American extends Person{
+  constructor(region_, gender_,language_){
+    super(region_, gender_);
+    this.language = language_;
+  }
+
+  greetings(val='hello'){
+    console.log(val);
+  }
+}
+
+let american = new American('USA','male','English')
+console.log(american);
+american.greetings();
